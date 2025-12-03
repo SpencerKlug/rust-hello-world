@@ -16,4 +16,10 @@ fn main() {
     println!("Long tuple second value: {}", long_tuple.1);
     let xs: [i32; 5] = [1, 2, 3, 4, 5];
     analyze_slice(&xs);
+    for i in 0..xs.len() + 1 { // Oops, one element too far!
+        match xs.get(i) {
+            Some(xval) => println!("{}: {}", i, xval),
+            None => println!("Slow down! {} is too far!", i),
+        }
+    }
 }
