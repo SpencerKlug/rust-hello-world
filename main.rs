@@ -22,4 +22,11 @@ fn main() {
             None => println!("Slow down! {} is too far!", i),
         }
     }
+    /*
+    Note: The previous column of `*` was entirely for style. There's
+    no actual need for it.
+    */
+    let an_integer = 1u32;
+    let copied_integer = an_integer;
+    println!("An integer: {:?}", copied_integer);
 }
